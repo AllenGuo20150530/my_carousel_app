@@ -1,20 +1,4 @@
-http://vip.cocode.cc/chest/shared/3176
-
-// 作业 1
-//
-// 扩充上课时候做的 slide 库, 添加一个功能, 当鼠标移动到小圆点上的时候, 播放那张图片
-
-
-// 作业 2
-//
-// 扩充上课时候做的 slide 库, 添加一个功能, 当鼠标点击小圆点的时候, 播放那张图片
-
-
-// 作业 3
-//
-// 扩充上课时候做的 slide 库, 添加一个功能
-// 小圆点被一系列缩略图取代
-// 鼠标点击缩略图播放那张图片
+// 缩略图指示器
 var insertImg = function(images) {
     var url = images[0]
     $('.gua-slide-images').append(`<img class='gua-slide-img gua-slide-active' src="${url}" alt="" />`)
@@ -66,9 +50,9 @@ var addEventThumbnailClick = function() {
 // 用一个函数传递图片 URL 参数来创建一个 slide
 // 函数如下
 var images = [
-    '1.jpg',
-    '2.jpg',
-    '3.jpg',
+    'images/1.jpg',
+    'images/2.jpg',
+    'images/3.jpg',
 ]
 var element = `
 <div class="gua-slide">
