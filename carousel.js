@@ -25,8 +25,8 @@ var insertThumbnail = function(images) {
         $('.gua-slide-thumbnails').append(`<img class='gua-slide-thumbnail' src="${url}" alt="" />`)
     }
 }
-var addEventThumbnailClick = function() {
-    $('.gua-slide-thumbnails').on('click', function(event){
+var addEventThumbnailMEnter = function() {
+    $('.gua-slide-thumbnail').mouseenter(function(event){
         var thumbnail = $(event.target)
         log('thumbnail-->', thumbnail)
         // 取出当前坐标，即为图片应该播放的图片
@@ -43,6 +43,11 @@ var addEventThumbnailClick = function() {
         var imgNext = $($('.gua-slide-img')[index])
         imgNext.addClass('gua-slide-active')
         imgNext.fadeIn()
+        // 指示器样式改变
+        var indicator = $($('.gua-slide-i')[index])
+        $('.gua-slide-i-active').removeClass('gua-slide-i-active')
+        indicator.addClass('gua-slide-i-active')
+
     })
 }
 // 作业 4
@@ -76,6 +81,8 @@ var GuaSlide = function(element, images) {
     addEventButtonClick()
     addEventIndicatorClick()
     addEventIndicatorMEnter()
+    insertThumbnail(images)
+    addEventThumbnailMEnter()
 }
 
 // 左右按钮切换
