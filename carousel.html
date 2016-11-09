@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>homework14</title>
+        </style>
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+        <script src="carousel.js"></script>
+        <script>
+            // ready 函数会在文档加载完成后才执行
+            $('document').ready(function(){
+                GuaSlide(element, images)
+            })
+        </script>
+        <style media="screen">
+            .vertical-center {
+                top: 50%;
+                position: relative;
+                transform: translateY(-50%);
+            }
+            .gua-slide {
+                width: 300px;
+                height: 200px;
+                overflow: hidden;
+            }
+            .gua-slide-images {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+            .gua-slide-thumbnail {
+                position: relative;
+                width: 10%;
+                height: 10%;
+            }
+            .gua-slide-button {
+                position: absolute;
+            }
+            .gua-slide-button-left {
+                left: 0;
+            }
+            .gua-slide-button-right {
+                right: 0;
+            }
+
+            .gua-slide-img {
+                display: none;
+            }
+            .gua-slide-active {
+                display: block;
+            }
+
+            .gua-slide-indicators {
+                bottom: 20px;
+                position: relative;
+                /*background: rebeccapurple;*/
+                text-align: center;
+            }
+            .gua-slide-i {
+                display: inline-block;
+                background: darkblue;
+                color: white;
+                border-radius: 50%;
+                padding: 0 5px;
+            }
+            .gua-slide-i-active {
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+        <div class="gua-slide">
+            <div class="gua-slide-images" data-active="0" data-imgs='3'>
+                <img class='gua-slide-img gua-slide-active' src="1.jpg" alt="" />
+                <img class='gua-slide-img' src=`2.jpg` alt="" />
+                <img class='gua-slide-img' src="3.jpg" alt="" />
+                <button class='gua-slide-button gua-slide-button-left vertical-center' type="button">上</button>
+                <button class='gua-slide-button gua-slide-button-right vertical-center' type="button">下</button>
+            </div>
+            <div class="gua-slide-indicators">
+
+                <div class="gua-slide-i gua-slide-i-active">1</div>
+                <div class="gua-slide-i">2</div>
+                <div class="gua-slide-i">3</div>
+            </div>
+        </div>
+    -->
+    </body>
+    <!--
+    <script>
+        var log = function() {
+            console.log.apply(console, arguments)
+        }
+        var play = function(offset) {
+            var activeIndex = $('.gua-slide-images').data('active')
+            var numberOfImgs = $('.gua-slide-images').data('imgs')
+            var i = (activeIndex + numberOfImgs + offset) % numberOfImgs
+            $('.gua-slide-images').data('active', i)
+            //
+            $('.gua-slide-active').fadeOut()
+            $('.gua-slide-active').removeClass('gua-slide-active')
+            //
+            var active = $($('.gua-slide-img')[i])
+            active.addClass('gua-slide-active')
+            active.fadeIn()
+            // 改变指示器
+            $('.gua-slide-i-active').removeClass('gua-slide-i-active')
+            var activeIndicator = $($('.gua-slide-i')[i])
+            activeIndicator.addClass('gua-slide-i-active')
+        }
+        var playPrev = function() {
+            play(-1)
+        }
+        var playNext = function() {
+            play(1)
+        }
+        $('.gua-slide-button').on('click', function(event){
+            var button = $(event.target)
+            if (button.hasClass('gua-slide-button-left')) {
+                playPrev()
+            } else {
+                playNext()
+            }
+        })
+        $('.gua-slide-indicators').on('click', function(event){
+            var indicator = $(event.target)
+            // 取出当前坐标，即为图片应该播放的图片
+            var index = indicator.index()
+            // 将此下标的红色，其他蓝色
+            $('.gua-slide-i-active').removeClass('gua-slide-i-active')
+            indicator.addClass('gua-slide-i-active')
+            // 使相应图片显示
+            var imgCurrent = $('.gua-slide-active')
+            imgCurrent.fadeOut()
+            imgCurrent.removeClass('gua-slide-active')
+            var imgNext = $($('.gua-slide-img')[index])
+            imgNext.addClass('gua-slide-active')
+            imgNext.fadeIn()
+        })
+        $('.gua-slide-i').mouseenter(function(event){
+            var indicator = $(event.target)
+            // 取出当前坐标，即为图片应该播放的图片
+            var index = indicator.index()
+            // 将此下标的红色，其他蓝色
+            $('.gua-slide-i-active').removeClass('gua-slide-i-active')
+            indicator.addClass('gua-slide-i-active')
+            // 使相应图片显示
+            var imgCurrent = $('.gua-slide-active')
+            imgCurrent.fadeOut()
+            imgCurrent.removeClass('gua-slide-active')
+            var imgNext = $($('.gua-slide-img')[index])
+            imgNext.addClass('gua-slide-active')
+            imgNext.fadeIn()
+        })
+    </script>
+-->
+</html>
