@@ -21,6 +21,14 @@
 }
 .gua-slide-button {
     position: absolute;
+    width: 10px;
+    height: 100px;
+    border-radius: 10px;
+    border-style: none;
+    padding: 2px;
+    color: white;
+    outline: none;
+    opacity: 0.5;
 }
 .gua-slide-button-left {
     left: 0;

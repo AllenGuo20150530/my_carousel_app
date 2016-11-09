@@ -58,8 +58,8 @@ var element = `
 <div class="gua-slide">
     <div class="gua-slide-images" data-active="0" data-imgs='3'>
 
-        <button class='gua-slide-button gua-slide-button-left vertical-center' type="button">上</button>
-        <button class='gua-slide-button gua-slide-button-right vertical-center' type="button">下</button>
+        <button class='gua-slide-button gua-slide-button-left vertical-center' type="button">&lt;</button>
+        <button class='gua-slide-button gua-slide-button-right vertical-center' type="button">&gt;</button>
     </div>
     <div class="gua-slide-indicators">
 
