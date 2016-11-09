@@ -132,12 +132,9 @@ var insertImg = function(images) {
         url = images[i]
         $('.gua-slide-images').append(`<img class='gua-slide-img' src="${url}" alt="" />`)
     }
-
-    var indicator = 1
-    $('.gua-slide-indicators').append(`<div class="gua-slide-i gua-slide-i-active">${indicator}</div>`)
+    $('.gua-slide-indicators').append(`<div class="gua-slide-i gua-slide-i-active"></div>`)
     for (var i = 2; i <= images.length; i++) {
-        indicator = i
-        $('.gua-slide-indicators').append(`<div class="gua-slide-i">${indicator}</div>`)
+        $('.gua-slide-indicators').append(`<div class="gua-slide-i"></div>`)
     }
 }
 var log = function() {
